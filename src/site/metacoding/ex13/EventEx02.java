@@ -14,8 +14,9 @@ class MyPanel extends JPanel {
 	int x = 100;
 	int y = 200;
 
+	// JPanel을 새로고침(다시 그린다)하는 것
 	@Override
-	protected void paintComponent(Graphics g) {
+	protected void paintComponent(Graphics g) { // g는 붓이다.
 		super.paintComponent(g);
 		System.out.println("패널 다시 그려짐");
 		// Panel에 그림이 다시 그려질 때마다 paintComponent가 호출되는 것

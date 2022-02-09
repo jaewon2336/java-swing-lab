@@ -65,6 +65,7 @@ public class BubbleFrame extends JFrame {
 				}
 			}
 
+			// 조이스틱
 			@Override
 			public void keyPressed(KeyEvent e) { // 누르면
 				// 왼 37, 오 39, 위 38, 아래 40
@@ -80,9 +81,10 @@ public class BubbleFrame extends JFrame {
 					if (!player.isLeft()) {
 						player.left();
 					}
-				} else if (e.getKeyCode() == 38) {
+				} else if (e.getKeyCode() == 38) { // if 자체를 막으면 이벤트 루프 등록을 안함
+					// System.out.println("체크");
 					if (!player.isJump()) {
-						player.isJump();
+						player.jump(); // 메서드 내부에서 if 분기 처리는 이벤트 루프에 등록은 되는데 실행이 안되는 것
 					}
 				}
 			}
